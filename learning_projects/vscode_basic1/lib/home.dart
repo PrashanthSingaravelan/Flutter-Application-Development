@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'package:app/function.dart';
 import 'package:flutter/material.dart';
-import 'function.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -29,8 +29,8 @@ class _HomeState extends State<Home> {
             ),
             TextButton(
                 onPressed: () async {
-                  data = await fetchdata(url);    // fetch the data from the function
-                  var decoded = jsonDecode(data); // decode the fetched data
+                  data = await fetchdata(url);
+                  var decoded = jsonDecode(data);
                   setState(() {
                     output = decoded['output'];
                   });
