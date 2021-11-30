@@ -1,4 +1,4 @@
-name: textappearance
+name: image_share
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -34,11 +34,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  http: ^0.13.4
+  image_picker: ^0.8.4+4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  http:
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

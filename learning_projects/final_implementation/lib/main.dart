@@ -1,0 +1,47 @@
+// @dart=2.9
+import 'package:easy_tap_implementation/document.dart';
+import 'package:easy_tap_implementation/menuScreen.dart';
+import 'package:flutter/material.dart';
+
+import 'audio_page.dart';
+import 'home_page.dart';
+import 'login_page.dart';
+import 'translated_page.dart';
+import 'document.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class ScreenArguments{
+  final String title;
+  final String message;
+
+  ScreenArguments(this.title, this.message);
+}
+
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+         '/': (context) => const MenuScreen(title:'Menu Page'),
+        '/home': (context) => const MyHomePage(title: 'Home Page'),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/translate': (context) => const TranslatedScreen(),
+        '/audio': (context) => const AudioScreen(),
+        '/document': (context) => const documentScreen(),
+      },
+    );
+  }
+}
